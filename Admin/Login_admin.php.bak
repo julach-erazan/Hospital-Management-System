@@ -1,0 +1,17 @@
+<?php
+	// Check if form is submitted
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+		 // Get form input values
+		$username = $_POST['username'];
+		 $password = $_POST['password'];
+
+		  // Check login condition
+	if ($username === 'admin' && $password === '123') {
+			// Successful login
+		header("Location: http://localhost/Ass/Admin/index.php");
+	} else {
+		// Failed login
+		echo 'Invalid username or password';
+		 }
+	}
+	?>
